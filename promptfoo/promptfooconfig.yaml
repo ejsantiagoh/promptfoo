@@ -1,0 +1,13 @@
+providers:
+  - id: google:gemini-2.5-flash
+  - id: google:gemini-2.5-lite
+
+prompts:
+  - "Resume este texto en una sola frase: {{texto}}"
+
+tests:
+  - vars:
+      texto: "Promptfoo es una herramienta para evaluar prompts de modelos de lenguaje de forma automatizada."
+    assert:
+      - type: contains
+        value: "evaluar"
